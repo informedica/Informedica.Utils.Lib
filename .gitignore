@@ -52,12 +52,12 @@
 # Add source files
 !/scripts/
 !/src/
-!/src/Informedica.GenUnits.Lib/
-!/src/Informedica.GenUnits.Lib/Scripts/
+!/src/Informedica.GenUtils.Lib/
+!/src/Informedica.GenUtils.Lib/Scripts/
 
 # Add test files
 !/tests/
-!/tests/Informedica.GenUnits.Tests/
+!/tests/Informedica.GenUtils.Tests/
 
 # Ignore generated documentation files
 /docs/content/**/*.md
