@@ -106,9 +106,9 @@ Target "Integrate" (fun _ ->
         failwith "Working copy is not clean, cannot integrate"
     else
         // Get the latest mono build
-        let lastTravisBuild   = Travis.getLatestBuild project
+        let lastTravisBuild   = Travis.getLatestBuild gitName
         // Get the latest .Net build
-        let lastAppVeyorBuild = AppVeyor.getLatestBuild project
+        let lastAppVeyorBuild = AppVeyor.getLatestBuild gitName
 
         // Check whether the builds passed
         match lastTravisBuild, lastAppVeyorBuild with
@@ -118,7 +118,7 @@ Target "Integrate" (fun _ ->
                 printfn "Last build was at %A and %s" dt st
                 // Update the master branch with the latest remote master
                 Git.Branches.checkoutBranch currDir master
-                Git.Branches.pull "" "origin" "master"
+                Git.Branches.pull "" remote master
                 // Merge the master with the current development branch
                 Git.Merge.merge currDir Git.Merge.FastForwardFlag develop
                 // Update the remote master branch
