@@ -2,7 +2,7 @@
 // This block of code is omitted in the generated HTML documentation. Use 
 // it to define helpers that you do not want to show in the documentation.
 #I "../../src/Informedica.GenUtils.Lib/Scripts"
-#load "load-project-debug.fsx"
+#load "load-project-release.fsx"
 
 (**
 GenUtils
@@ -14,7 +14,7 @@ Documentation
   <div class="span1"></div>
   <div class="span6">
     <div class="well well-small" id="nuget">
-      The GenUtils library can be <a href="https://nuget.org/packages/GenUtils">installed from NuGet</a>:
+      The GenUtils library can be <a href="https://nuget.org/packages/Informedica.GenUtils.Lib">installed from NuGet</a>:
       <pre>PM> Install-Package GenUtils</pre>
     </div>
   </div>
@@ -28,6 +28,13 @@ This example demonstrates using a function defined in this sample library.
 
 *)
 
+open Informedica.GenUtils.Lib.BCL
+
+"Samlpe string" |> String.replace "Samlpe" "Sample"
+
+open Informedica.GenUtils.Lib
+
+BigRational.gcd 24N 30N
 
 (**
 Some more info
