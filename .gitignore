@@ -21,6 +21,10 @@
 !*.cmd
 !*.sh
 
+# ignore release and publish nuget commands
+release.cmd
+publishnuget.cmd
+
 # Add proc file
 !Procfile
 
@@ -32,6 +36,7 @@
 !paket.dependencies
 !paket.lock
 !paket.references
+!paket.template
 
 # Add yml files to ci on appveyor and travis
 !appveyor.yml

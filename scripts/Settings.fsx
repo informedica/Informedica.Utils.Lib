@@ -12,11 +12,11 @@
 
 // The name of the project
 // (used by attributes in AssemblyInfo, name of a NuGet package and directory in 'src')
-let project = "GenUtils"
+let project = "Informedica.GenUtils.Lib"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
-let summary = ""
+let summary = "A library with utility functions"
 
 // Longer description of the project
 // (used as a description for NuGet package; line breaks are automatically cleaned up)
@@ -37,10 +37,13 @@ let testAssemblies = "tests/**/bin/Release/*Tests*.dll"
 // Git configuration (used for publishing documentation in gh-pages branch)
 // The profile where the project is posted
 let gitOwner = "halcwb" 
-let gitHome = "https://github.com/" + gitOwner
+let gitHome  = "https://github.com/" + gitOwner
 
 // The name of the project on GitHub
-let gitName = project + ".git"
+let gitName = "GenUtils" 
+
+// The repository name
+let reposName = gitName + ".git"
 
 // --------------------------------------------------------------------------------------
 // END TODO: The rest of the file includes standard build steps
