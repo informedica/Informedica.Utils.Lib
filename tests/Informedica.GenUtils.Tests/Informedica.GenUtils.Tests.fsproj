@@ -359,9 +359,9 @@
       <Paket>True</Paket>
     </Compile>
     <Compile Include="BuildTest.fs" />
-    <None Include="Script.fsx" />
     <None Include="Scripts\load-references-release.fsx" />
     <None Include="Scripts\load-project-release.fsx" />
+    <None Include="Scripts\Script.fsx" />
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
