@@ -15,7 +15,7 @@ Documentation
   <div class="span6">
     <div class="well well-small" id="nuget">
       The GenUtils library can be <a href="https://nuget.org/packages/Informedica.GenUtils.Lib">installed from NuGet</a>:
-      <pre>PM> Install-Package GenUtils</pre>
+      <pre>PM> Install-Package Informedica.GenUtils.Lib -Pre</pre>
     </div>
   </div>
   <div class="span1"></div>
