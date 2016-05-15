@@ -6,6 +6,8 @@ module BigRational =
     /// Message type
     type Message =
         | CannotMatchOperator
+        | CannotDivideByZero
+        | CannotParseString of string
     
     /// Exception type
     exception BigRationalException of Message
@@ -20,7 +22,11 @@ module BigRational =
     let get = apply id
 
     /// Parse a string to a bigrational
-    let parse = BigRational.Parse
+    let parse s = 
+        try 
+            s |> BigRational.Parse
+        with
+        | _ -> s |> CannotParseString |> raiseExc
 
     /// Try to parse a string and 
     /// return `None` if it fails 
@@ -51,7 +57,11 @@ module BigRational =
         | None    -> ""
 
     /// Convert `n` to a multiple of `d`.
+    /// Raises an `CannotDivideByZero` message
+    /// exception when `d` is zero.
     let toMultipleOf d n  =
+        if d = 0N then CannotDivideByZero |> raiseExc
+
         let m = (n / d) |> BigRational.ToInt32 |> BigRational.FromInt
         if m * d < n then (m + 1N) * d else m * d
 
