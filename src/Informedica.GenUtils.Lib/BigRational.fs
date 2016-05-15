@@ -3,28 +3,38 @@
 /// Helper functions for `BigRational`
 module BigRational = 
     
+    /// Apply a `f` to bigrational `x`
     let apply f (x: BigRational) = f x
 
+    /// Utility to enable type inference
     let get = apply id
 
+    /// Parse a string to a bigrational
     let parse = BigRational.Parse
 
-    let fromInt = BigRational.FromInt
-
+    /// Try to parse a string and 
+    /// return `None` if it fails 
+    /// otherwise `Some` bigrational
     let tryParse s = 
         try 
             s |> parse |> Some 
         with 
         | _ -> None
 
+    /// Create a bigrational from an int
+    let fromInt = BigRational.FromInt
+
+    /// Get the greatest common divisor
+    /// of two bigrationals `a` and `b`
     let rec gcd a b =
         match b with
         | _  when b = 0N -> abs a
         | _ -> gcd b ((a.Numerator % b.Numerator) |> BigRational.FromBigInt)
 
+    /// Convert a bigrational to a string
     let toString v = (v |> get).ToString()
 
-    /// Convert an optional `Value` to a `string`.
+    /// Convert an optional `BigRational` to a `string`.
     /// If `None` then return empty `string`.
     let optToString = function
         | Some v' -> v' |> toString
