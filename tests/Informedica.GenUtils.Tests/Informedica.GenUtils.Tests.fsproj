@@ -63,6 +63,7 @@
       <Paket>True</Paket>
     </Compile>
     <Compile Include="BuildTest.fs" />
+    <Compile Include="BigRationalTests.fs" />
     <None Include="Scripts\load-references-release.fsx" />
     <None Include="Scripts\load-project-release.fsx" />
     <None Include="Scripts\Script.fsx" />

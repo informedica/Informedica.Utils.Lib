@@ -2,7 +2,17 @@
 
 /// Helper functions for `BigRational`
 module BigRational = 
+
+    /// Message type
+    type Message =
+        | CannotMatchOperator
     
+    /// Exception type
+    exception BigRationalException of Message
+
+    /// Raise exception with message `m`
+    let raiseExc m = m |> BigRationalException |> raise
+
     /// Apply a `f` to bigrational `x`
     let apply f (x: BigRational) = f x
 
@@ -50,12 +60,16 @@ module BigRational =
         let incr, v = incr |> get, v |> get 
         (v.Numerator * incr.Denominator) % (incr.Numerator * v.Denominator) = 0I
 
+    /// Constant 0
     let zero = 0N
 
+    /// Constant 1
     let one = 1N
 
+    /// Constant 2
     let two = 2N
 
+    /// Constant 3
     let three = 3N
 
     /// Check whether the operator is subtraction
@@ -72,15 +86,16 @@ module BigRational =
 
     /// Match an operator `op` to either
     /// multiplication, division, addition
-    /// or subtraction, returns `NoOp` when
-    /// the operation is neither.
+    /// or subtraction. </br> 
+    /// Raises a `CannotMatchOperator` message 
+    /// exception when no match.
     let (|Mult|Div|Add|Subtr|) op =
         match op with
         | _ when op |> opIsMult  -> Mult
         | _ when op |> opIsDiv   -> Div
         | _ when op |> opIsAdd   -> Add
         | _ when op |> opIsSubtr -> Subtr
-        | _ -> failwith "Operator is not supported"
+        | _ -> CannotMatchOperator |> raiseExc
 
 
 
