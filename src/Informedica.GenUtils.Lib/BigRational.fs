@@ -28,6 +28,15 @@ module BigRational =
         with
         | _ -> s |> CannotParseString |> raiseExc
 
+
+    /// Parse a string and pass the result 
+    /// either to `succ` or `fail`
+    let parseCont succ fail s =
+        try 
+            parse s |> succ
+        with
+        | BigRationalException(m) -> m |> fail
+
     /// Try to parse a string and 
     /// return `None` if it fails 
     /// otherwise `Some` bigrational
@@ -57,13 +66,19 @@ module BigRational =
         | None    -> ""
 
     /// Convert `n` to a multiple of `d`.
+    /// Passes an `CannotDivideByZero` message
+    /// to `fail` when `d` is zero.
+    let toMultipleOfCont succ fail d n  =
+        if d = 0N then CannotDivideByZero |> fail
+        else
+            let m = (n / d) |> BigRational.ToInt32 |> BigRational.FromInt
+            if m * d < n then (m + 1N) * d else m * d
+            |> succ
+    
+    /// Convert `n` to a multiple of `d`.
     /// Raises an `CannotDivideByZero` message
     /// exception when `d` is zero.
-    let toMultipleOf d n  =
-        if d = 0N then CannotDivideByZero |> raiseExc
-
-        let m = (n / d) |> BigRational.ToInt32 |> BigRational.FromInt
-        if m * d < n then (m + 1N) * d else m * d
+    let toMultipleOf n d = toMultipleOfCont id raiseExc n d
 
     /// Checks whether `v` is a multiple of `incr`
     let isMultiple incr v =

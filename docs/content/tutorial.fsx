@@ -71,3 +71,41 @@ Returns:
 > val it : string = ""
 
 *)
+
+(** 
+## Use *Continuation* functions when possible
+
+If there are *continuation* functions, use those instead of functions that can throw an error.
+
+For example the `BigRational.parse` function had a *continuation* counterpart.
+*)
+
+type Result<'T, 'Msg> =
+    | Succ of 'T
+    | Fail of 'Msg list
+
+let parse =
+    let succ n = n |> Succ
+    let fail m = [m] |> Fail
+    BigRational.parseCont succ fail 
+
+"blah" |> parse
+
+(** 
+Returns:
+
+> val it : Result<BigRational,BigRational.Message> =
+>  Fail [CannotParseString "blah"]
+
+While
+*)
+
+"2" |> parse
+
+(** 
+Returns:
+
+> val it : Result<BigRational,BigRational.Message> = Succ 2N
+
+Thus, a success failure type monadic system can be build with continuation functions.
+*)
