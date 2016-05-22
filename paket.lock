@@ -1,17 +1,17 @@
 REDIRECTS: ON
 NUGET
   remote: https://www.nuget.org/api/v2
-    FAKE (4.22.6)
-    FsCheck (2.2.4)
+    FAKE (4.27)
+    FsCheck (2.4)
       FSharp.Core (>= 3.1.2.5)
-    FsCheck.Nunit (2.2.4)
-      FsCheck (>= 2.2.4)
+    FsCheck.Nunit (2.4)
+      FsCheck (>= 2.4)
       NUnit (>= 2.6.4 < 2.7)
       NUnit.Runners (>= 2.6.4 < 2.7)
     FSharp.Compiler.Service (2.0.0.6)
     FSharp.Core (4.0.0.1)
-    FSharp.Formatting (2.14)
-      FSharp.Compiler.Service (>= 2.0.0.3 < 2.1)
+    FSharp.Formatting (2.14.2)
+      FSharp.Compiler.Service (2.0.0.6)
       FSharpVSPowerTools.Core (>= 2.3 < 2.4)
     FSharpVSPowerTools.Core (2.3)
       FSharp.Compiler.Service (>= 2.0.0.3)
@@ -44,5 +44,9 @@ NUGET
     Unquote (3.1.1)
 GITHUB
   remote: fsharp/FAKE
-    modules/Octokit/Octokit.fsx (32e262c11174b196dc8af16a577c8c3aa0ab0b2b)
+    modules/Octokit/Octokit.fsx (8c077f35f8cd0350485109ddd1810dafe9885d1a)
       Octokit
+  remote: halcwb/GenBuild
+    scripts/appveyor.fsx (601aef1c9ab42ebc3d3ec76dbca39fc076544deb)
+    scripts/targets.fsx (601aef1c9ab42ebc3d3ec76dbca39fc076544deb)
+    scripts/travis.fsx (601aef1c9ab42ebc3d3ec76dbca39fc076544deb)
