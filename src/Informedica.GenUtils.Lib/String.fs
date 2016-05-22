@@ -66,8 +66,21 @@ module String =
     /// Check if a string is a letter
     let isLetter s = List.exists (fun s' -> s' = s) letters
 
+    let equals s1 s2 = s1 = s2
+
     /// Check if string `s1` equals `s2` caps insensitive
     let equalsCapInsens s1 s2 = s1 |> toLower |> trim = (s2 |> toLower |> trim) 
 
     /// Split a string `s` at string `dels`
     let split (dels: string) (s: string) = s.Split(dels.ToCharArray()) |> Array.toList
+
+    [<CompilerMessage("Can fail", 10000)>]
+    let startsWithEqs eqs s2 s1 =
+        printfn "%s starts with %s" s1 s2
+        s1 |> substring 0 (s2 |> String.length) |> eqs s2
+
+    let startsWith equals s2 s1 =
+        printfn "%s starts with %s" s1 s2
+        s1 |> substring 0 (s2 |> String.length) = s2
+
+    let startsWithCapsInsens = startsWithEqs equalsCapInsens
