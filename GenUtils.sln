@@ -15,9 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{0AE66425-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{AEDD867D-262C-4058-A052-E0E21501D82F}"
 	ProjectSection(SolutionItems) = preProject
-		scripts\AppVeyor.fsx = scripts\AppVeyor.fsx
-		scripts\Settings.fsx = scripts\Settings.fsx
-		scripts\Travis.fsx = scripts\Travis.fsx
+		scripts\settings.fsx = scripts\settings.fsx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{AF293369-5C0C-4D60-8E59-38E6916F7EA6}"
