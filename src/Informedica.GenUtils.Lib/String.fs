@@ -74,13 +74,17 @@ module String =
     /// Split a string `s` at string `dels`
     let split (dels: string) (s: string) = s.Split(dels.ToCharArray()) |> Array.toList
 
-    [<CompilerMessage("Can fail", 10000)>]
+    /// Check whether **s1** starts with
+    /// **s2** using string comparison **eqs**
     let startsWithEqs eqs s2 s1 =
-        printfn "%s starts with %s" s1 s2
-        s1 |> substring 0 (s2 |> String.length) |> eqs s2
+        if s2 |> String.length > (s1 |> String.length) then false
+        else
+            s1 |> substring 0 (s2 |> String.length) |> eqs s2
 
-    let startsWith equals s2 s1 =
-        printfn "%s starts with %s" s1 s2
-        s1 |> substring 0 (s2 |> String.length) = s2
+    /// Check whether **s1** starts with
+    /// **s2** caps sensitive
+    let startsWith s2 s1 = startsWithEqs equals
 
+    /// Check whether **s1** starts with
+    /// **s2** caps insensitive
     let startsWithCapsInsens = startsWithEqs equalsCapInsens
