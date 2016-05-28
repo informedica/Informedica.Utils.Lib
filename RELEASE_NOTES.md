@@ -1,3 +1,8 @@
+#### 0.3.0-beta - May 28 2016
+* Added list replace and distinct functions
+* Added safe null check
+* Improved String startswith 
+
 #### 0.2.1-beta - May 15 2016
 * Added tests for BigRational functions
 * Added exception types for String and BigRational functions
