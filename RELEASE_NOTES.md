@@ -1,3 +1,6 @@
+#### 0.4.0-beta - May 31 2016
+* Added reflection functions for union case to and from string
+
 #### 0.3.0-beta - May 28 2016
 * Added list replace and distinct functions
 * Added safe null check
