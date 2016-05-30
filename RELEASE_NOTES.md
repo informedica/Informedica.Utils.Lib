@@ -1,3 +1,6 @@
+#### 0.4.1-beta - May 31 2016
+* Improved union case fromString function
+
 #### 0.4.0-beta - May 31 2016
 * Added reflection functions for union case to and from string
 
