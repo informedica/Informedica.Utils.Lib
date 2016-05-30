@@ -11,7 +11,8 @@ module Reflection =
         | case, _ -> case.Name
 
     /// Create a union case option from a string value
-    let fromString (t:System.Type) (s:string) =
+    let fromString<'T> (*(t:System.Type)*) (s:string) =
+        let t = typeof<'T>
         match FSharpType.GetUnionCases t |> Array.filter (fun case -> case.Name = s) with
         |[|case|] -> Some(FSharpValue.MakeUnion(case,[||]))
         |_ -> None
