@@ -14,3 +14,11 @@ type ``Test that build was succesfull`` () =
     member x.``Always pass test`` () = ()
 
 
+    [<Test>]
+    member x.``Unquote is working`` () =
+        test <@ 1 = 1 @>
+
+    [<Property>]
+    member x.``FsCheck is working`` () =
+        fun b -> if b then true else true
+
