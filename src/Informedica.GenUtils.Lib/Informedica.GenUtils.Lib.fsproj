@@ -59,6 +59,7 @@
     <Content Include="InstallationDummyFile.txt">
       <Paket>True</Paket>
     </Content>
+    <Compile Include="Reflection.fs" />
     <Compile Include="String.fs" />
     <Compile Include="BigRational.fs" />
     <None Include="Scripts\load-references-debug.fsx" />
