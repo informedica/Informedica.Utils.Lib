@@ -62,6 +62,7 @@
     <Compile Include="NullCheck.fs" />
     <Compile Include="List.fs" />
     <Compile Include="Option.fs" />
+    <Compile Include="Reflection.fs" />
     <Compile Include="String.fs" />
     <Compile Include="BigRational.fs" />
     <None Include="Scripts\load-references-debug.fsx" />
