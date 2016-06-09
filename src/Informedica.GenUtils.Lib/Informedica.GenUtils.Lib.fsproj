@@ -71,6 +71,7 @@
     <None Include="Scripts\load-project-release.fsx" />
     <None Include="Scripts\Script.fsx" />
     <None Include="paket.references" />
+    <Compile Include="AssemblyInfo.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

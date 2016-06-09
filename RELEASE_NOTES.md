@@ -1,3 +1,6 @@
+#### 0.4.2-beta - June 09 2016
+* Added missing assembly info
+
 #### 0.4.1-beta - May 31 2016
 * Improved union case fromString function
 
