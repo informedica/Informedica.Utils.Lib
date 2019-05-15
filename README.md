@@ -9,7 +9,11 @@ Mono | .NET | NuGet|
 
 
 # Background
-
+The main purpose of this library is to 'functionalize' existing dotnet libraries and provide common utility functions
 
 # Libray design
 This repository uses an explicit opt-in `.gignore` strategy, meaning that all files are excluded unless specifically included via the `.gitignore` file.
+
+# Build
+
+The library can be build by using the `build.cmd` or `build.sh`.
