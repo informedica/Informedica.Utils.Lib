@@ -17,3 +17,12 @@ This repository uses an explicit opt-in `.gignore` strategy, meaning that all fi
 # Build
 
 The library can be build by using the `build.cmd` or `build.sh`.
+
+## Usage of FAKE
+As I always forget the usefull fake commands, here is a list:
+
+* To build use: `fake run build.fsx`
+* To list targets: `fake run build.fsx --list`
+* To run a specific target: `fake run build.fsx --target Clean`
+
+Another thing: The build scripts keeps track of its own dependencies, these are locked in the `build.fsx.lock` file. However, when updating FAKE references, you'll need to remove the `build.fsx.lock` file first.

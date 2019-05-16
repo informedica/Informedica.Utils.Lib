@@ -1,5 +1,7 @@
 FSPowerPack.Community
-Unquote
-FsCheck
-FsCheck.NUnit
-FsUnit
+
+group Testing
+	Unquote
+	FsCheck
+	FsCheck.NUnit
+	FsUnit
