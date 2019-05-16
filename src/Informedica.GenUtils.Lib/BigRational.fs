@@ -2,6 +2,9 @@
 
 /// Helper functions for `BigRational`
 module BigRational = 
+     
+    open System
+    open MathNet.Numerics
 
     /// Message type
     type Message =

@@ -1,0 +1,22 @@
+framework: auto-detect
+
+source https://nuget.org/api/v2
+
+nuget FSharp.Core
+nuget MathNet.Numerics.FSharp
+
+clitool dotnet-fake
+
+group Formatting
+source https://nuget.org/api/v2
+
+nuget FSharp.Formatting
+nuget FSharp.Formatting.CommandTool
+
+group Testing
+source https://nuget.org/api/v2
+
+nuget Unquote
+nuget FsCheck
+nuget FsCheck.NUnit
+nuget FsUnit
