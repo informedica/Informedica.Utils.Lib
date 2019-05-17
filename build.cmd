@@ -11,4 +11,4 @@ if not exist .paket\paket.exe (
 
 dotnet restore build.proj
 
-fake build --target %*
+dotnet fake build --target %*

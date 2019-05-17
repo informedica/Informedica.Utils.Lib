@@ -26,4 +26,4 @@ fi
 dotnet restore build.proj
 
 
-fake build --target $@
+dotnet fake build --target $@
