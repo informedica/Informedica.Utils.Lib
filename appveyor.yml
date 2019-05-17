@@ -1,18 +1,7 @@
-environment:
-  deploy_password:
+image: Visual Studio 2017
 
-shallow_clone: true
-
-before_build:
-
+init:
+  - git config --global core.autocrlf input
 build_script:
-  - build.cmd test
-
+  - cmd: build.cmd test
 test: off
-
-test_script:
-  #- nuget restore tests\Tests.sln
-  #- test.cmd
-  
-deploy_script:
-  #- deploy.cmd
