@@ -4,11 +4,20 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="BCL\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="NullCheck.fs" />
-    <Compile Include="String.fs" />
-    <Compile Include="BigRational.fs" />
+    <Compile Include="BCL\Char.fs" />
+    <Compile Include="BCL\String.fs" />
+    <Compile Include="BCL\Int32.fs" />
+    <Compile Include="BCL\Double.fs" />
+    <Compile Include="BCL\BigRational.fs" />
+    <Compile Include="BCL\DateTime.fs" />
     <Compile Include="List.fs" />
     <Compile Include="Option.fs" />
+    <Compile Include="Reflection.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
