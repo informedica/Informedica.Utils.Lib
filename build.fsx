@@ -32,18 +32,20 @@ let project = "src/Informedica.GenUtils.Lib/Informedica.GenUtils.Lib.fsproj"
 // Targets
 
 Target.create "Clean" <| fun _ ->
+    Trace.trace "Cleaning up stuff..."
     Shell.cleanDir buildDir
 
 
 Target.create "Build" <| fun _ ->
+    Trace.trace "Build the project..."
     DotNet.build id project  
 
 
-Target.create "Default" <| fun _ ->
-    Trace.log "Hello World"
+Target.create "Test" <| fun _ ->
+    Trace.trace "Running tests..."
 
 
-Target.create "DoNothing" <| ignore
+Target.create "DoNothing" ignore
 
 
 // Dependencies
@@ -52,11 +54,12 @@ open Fake.Core.TargetOperators
 
 
 "Clean"
-==> "Default"
+==> "Build"
+==> "Test"
 
 
 // Start build
 
-Target.runOrDefault "Default"
+Target.runOrDefault "Build"
 
 

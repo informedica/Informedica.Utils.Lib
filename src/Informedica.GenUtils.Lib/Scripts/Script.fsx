@@ -13,6 +13,7 @@ module CharTests =
 
     open Informedica.GenUtils.Lib.BCL
     open Swensen.Unquote
+    open FsCheck
 
     // all lower case letters are not capitals
     test
@@ -32,7 +33,22 @@ module CharTests =
             ) 
         @>
 
+
+    let testLower = 
+        Char.toLower 
+        >> Char.isCapital 
+        >> not
+
+    Check.Quick testLower
     
+    let testUpper c =
+        if c |> Char.isLetter |> not then true
+        else
+            c
+            |> Char.toUpper
+            |> Char.isCapital
+
+    Check.Quick testUpper
 
 
 module ReflectionTests =

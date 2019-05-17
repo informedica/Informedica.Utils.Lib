@@ -14,6 +14,6 @@ module Reflection =
     let fromString<'T> (*(t:System.Type)*) (s:string) =
         let t = typeof<'T>
         match FSharpType.GetUnionCases t |> Array.filter (fun case -> case.Name = s) with
-        |[|case|] -> Some(FSharpValue.MakeUnion(case,[||]))
+        |[|case|] -> Some(FSharpValue.MakeUnion(case,[||]) :?> 'T)
         |_ -> None
 
