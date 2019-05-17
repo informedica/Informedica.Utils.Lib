@@ -17,6 +17,5 @@ group Testing
 source https://nuget.org/api/v2
 
 nuget Unquote
-nuget FsCheck
-nuget FsCheck.NUnit
-nuget FsUnit
+nuget Expecto
+nuget Expecto.FsCheck

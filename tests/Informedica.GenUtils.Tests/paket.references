@@ -2,6 +2,5 @@ MathNet.Numerics.FSharp
 
 group Testing
 	Unquote
-	FsCheck
-	FsCheck.NUnit
-	FsUnit
+	Expecto
+	Expecto.FsCheck

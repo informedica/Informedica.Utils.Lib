@@ -4,8 +4,12 @@
 #load "../../../.paket/load/netstandard2.1/main.group.fsx"
 #load "../../../.paket/load/netstandard2.1/Testing/testing.group.fsx"
 
+#load "../Continuation.fs"
 #load "../BCL/Char.fs"
 #load "../Reflection.fs"
+
+
+module ContinuationTests =
 
 
 

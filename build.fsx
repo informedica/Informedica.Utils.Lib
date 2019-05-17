@@ -44,6 +44,16 @@ Target.create "Build" <| fun _ ->
 Target.create "Test" <| fun _ ->
     Trace.trace "Running tests..."
 
+    let cmd = "run"
+    let args = "--project tests/Informedica.GenUtils.Tests/Informedica.GenUtils.Tests.fsproj"
+    let result = 
+        DotNet.exec 
+            (fun x -> { x with DotNetCliPath = "dotnet" }) 
+            cmd 
+            args
+    if not result.OK then 
+        failwithf "`dotnet %s %s` failed" cmd args
+
 
 Target.create "DoNothing" ignore
 

@@ -8,6 +8,7 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\Script.fsx" />
     <Compile Include="Continuation.fs" />
     <Compile Include="Memoization.fs" />
     <Compile Include="Reflection.fs" />
