@@ -1,57 +1,56 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Informedica.GenUtils.Lib", "src\Informedica.GenUtils.Lib\Informedica.GenUtils.Lib.fsproj", "{54A62E70-FC42-4595-B0D4-C748D6E37F5B}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0D2D0312-7A26-4806-A4F7-E7A29244426B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC08EE1B-1651-485C-8DA7-47FCE3F99D01}"
-	ProjectSection(SolutionItems) = preProject
-		build.fsx = build.fsx
-		paket.dependencies = paket.dependencies
-		RELEASE_NOTES.md = RELEASE_NOTES.md
-	EndProjectSection
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Informedica.GenUtils.Lib", "src\Informedica.GenUtils.Lib\Informedica.GenUtils.Lib.fsproj", "{1B508C36-26FB-4E75-8B5F-8CF30951BA01}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{0AE66425-24E1-43E1-A211-2A29FD858A02}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DE8F8045-EE19-45EC-B5F0-24CC4537E4EE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{AEDD867D-262C-4058-A052-E0E21501D82F}"
-	ProjectSection(SolutionItems) = preProject
-		scripts\settings.fsx = scripts\settings.fsx
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{AF293369-5C0C-4D60-8E59-38E6916F7EA6}"
-	ProjectSection(SolutionItems) = preProject
-		docs\content\index.fsx = docs\content\index.fsx
-		docs\content\tutorial.fsx = docs\content\tutorial.fsx
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{52905A00-454B-479E-8356-34929EF93CDB}"
-	ProjectSection(SolutionItems) = preProject
-		docs\tools\generate.fsx = docs\tools\generate.fsx
-	EndProjectSection
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Informedica.GenUtils.Tests", "tests\Informedica.GenUtils.Tests\Informedica.GenUtils.Tests.fsproj", "{A40BF325-D04A-4125-920D-C386FC96DCF7}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Informedica.GenUtils.Tests", "tests\Informedica.GenUtils.Tests\Informedica.GenUtils.Tests.fsproj", "{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{54A62E70-FC42-4595-B0D4-C748D6E37F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54A62E70-FC42-4595-B0D4-C748D6E37F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54A62E70-FC42-4595-B0D4-C748D6E37F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54A62E70-FC42-4595-B0D4-C748D6E37F5B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A40BF325-D04A-4125-920D-C386FC96DCF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A40BF325-D04A-4125-920D-C386FC96DCF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A40BF325-D04A-4125-920D-C386FC96DCF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A40BF325-D04A-4125-920D-C386FC96DCF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Debug|x64.Build.0 = Debug|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Debug|x86.Build.0 = Debug|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Release|x64.ActiveCfg = Release|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Release|x64.Build.0 = Release|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Release|x86.ActiveCfg = Release|Any CPU
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01}.Release|x86.Build.0 = Release|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Debug|x64.Build.0 = Debug|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Debug|x86.Build.0 = Debug|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Release|x64.ActiveCfg = Release|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Release|x64.Build.0 = Release|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Release|x86.ActiveCfg = Release|Any CPU
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{AF293369-5C0C-4D60-8E59-38E6916F7EA6} = {0AE66425-24E1-43E1-A211-2A29FD858A02}
-		{52905A00-454B-479E-8356-34929EF93CDB} = {0AE66425-24E1-43E1-A211-2A29FD858A02}
+		{1B508C36-26FB-4E75-8B5F-8CF30951BA01} = {0D2D0312-7A26-4806-A4F7-E7A29244426B}
+		{C289B3EA-80D0-4A06-9DB7-CAACD2C7F2E3} = {DE8F8045-EE19-45EC-B5F0-24CC4537E4EE}
 	EndGlobalSection
 EndGlobal
