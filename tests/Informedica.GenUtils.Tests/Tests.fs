@@ -595,3 +595,75 @@
                 }
 
             ]
+
+
+    module List =
+
+        open Expecto
+
+        open Informedica.GenUtils.Lib
+
+        [<Tests>]
+        let tests =
+
+            let equals exp txt res = Expect.equal res exp txt
+
+            testList "List" [
+
+                test "replace an element in an empty list " {
+                    []
+                    |> List.replace ((=) "a") ""
+                    |> equals [] "returns an empty list"
+                }
+
+                test "replace an element in a list with the element " {
+                    ["a"]
+                    |> List.replace ((=) "a") "b"
+                    |> equals ["b"] "returns the list with the first match replaced"
+                }
+
+                test "replace an element in a list without the element " {
+                    ["a"]
+                    |> List.replace ((=) "b") ""
+                    |> equals ["a"] "returns the list with the first match replaced"
+                }
+
+                test "replace an element in a list with multiple elements " {
+                    ["a";"b";"a"]
+                    |> List.replace ((=) "a") "b"
+                    |> equals ["b";"b";"a"] "returns the list with the first match replaced"
+                }
+
+
+            ]
+
+
+    module Reflection =
+
+        open Expecto
+
+        open Informedica.GenUtils.Lib
+
+        type TestUnion = TestUnion | AnotherTestUnion
+
+        [<Tests>]
+        let tests =
+
+          testList "Reflection toString and fromString " [
+
+            testCase "of discriminate union TestUnion" <| fun _ ->
+              Expect.equal (TestUnion |> Reflection.toString) "TestUnion" "should print TestUnion"
+     
+            test "of discriminate union AnotherTestUnion" {
+              Expect.equal (AnotherTestUnion |> Reflection.toString) "AnotherTestUnion" "should print AnotherTestUnion"
+            }
+
+            test "can create a TestUnion Option" {
+                Expect.equal ("TestUnion" |> Reflection.fromString<TestUnion>) (Some TestUnion) "from string TestUnion"
+            }
+
+            test "will return None with a non existing union type" {
+                Expect.equal ("blah" |> Reflection.fromString<TestUnion>) None "from string blah"
+            }
+ 
+          ]
