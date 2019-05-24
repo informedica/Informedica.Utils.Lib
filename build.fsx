@@ -4,6 +4,7 @@
 #r "paket:
 nuget FSharp.Core
 nuget Fake.DotNet.Cli
+nuget Fake.DotNet.AssemblyInfoFile
 nuget Fake.IO.FileSystem
 nuget Fake.Core.Target //"
 
@@ -22,26 +23,68 @@ System.Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
 
 open Fake.Core
 open Fake.IO
+open Fake.IO.Globbing.Operators
 open Fake.DotNet
+
+
+// Utils
+
+// Helper active pattern for project types
+let (|Fsproj|Csproj|Vbproj|) (projFileName:string) = 
+    match projFileName with
+    | f when f.EndsWith("fsproj") -> Fsproj
+    | f when f.EndsWith("csproj") -> Csproj
+    | f when f.EndsWith("vbproj") -> Vbproj
+    | _                           -> failwith (sprintf "Project file %s not supported. Unknown project type." projFileName)
+
 
 
 // Properties
 let buildDir = "./build/"
 let project = "src/Informedica.GenUtils.Lib/Informedica.GenUtils.Lib.fsproj"
 
+
 // Targets
 
-Target.create "Clean" <| fun _ ->
+// Generate assembly info files with the right version & up-to-date information
+Target.create "AssemblyInfo" <| fun _ ->
+    let getAssemblyInfoAttributes projectName =
+        [ Attribute.Title (projectName)
+          Attribute.Product project
+          Attribute.Description summary
+          Attribute.Version release.AssemblyVersion
+          Attribute.FileVersion release.AssemblyVersion ]
+
+    let getProjectDetails projectPath =
+        let projectName = System.IO.Path.GetFileNameWithoutExtension(projectPath)
+        ( projectPath, 
+          projectName,
+          System.IO.Path.GetDirectoryName(projectPath),
+          (getAssemblyInfoAttributes projectName)
+        )
+
+    !! "src/**/*.??proj"
+    |> Seq.map getProjectDetails
+    |> Seq.iter (fun (projFileName, projectName, folderName, attributes) ->
+        match projFileName with
+        | Fsproj -> CreateFSharpAssemblyInfo (folderName @@ "AssemblyInfo.fs") attributes
+        | Csproj -> CreateCSharpAssemblyInfo ((folderName @@ "Properties") @@ "AssemblyInfo.cs") attributes
+        | Vbproj -> CreateVisualBasicAssemblyInfo ((folderName @@ "My Project") @@ "AssemblyInfo.vb") attributes
+        )
+
+
+
+Target.create "clean" <| fun _ ->
     Trace.trace "Cleaning up stuff..."
     Shell.cleanDir buildDir
 
 
-Target.create "Build" <| fun _ ->
+Target.create "build" <| fun _ ->
     Trace.trace "Build the project..."
     DotNet.build id project  
 
 
-Target.create "Test" <| fun _ ->
+Target.create "test" <| fun _ ->
     Trace.trace "Running tests..."
 
     let cmd = "run"
@@ -55,7 +98,7 @@ Target.create "Test" <| fun _ ->
         failwithf "`dotnet %s %s` failed" cmd args
 
 
-Target.create "DoNothing" ignore
+Target.create "nothing" ignore
 
 
 // Dependencies
@@ -63,13 +106,13 @@ Target.create "DoNothing" ignore
 open Fake.Core.TargetOperators
 
 
-"Clean"
-==> "Build"
-==> "Test"
-
+"clean"
+==> "build"
+==> "test"
+==> "publish"
 
 // Start build
 
-Target.runOrDefault "Build"
+Target.runOrDefault "build"
 
 

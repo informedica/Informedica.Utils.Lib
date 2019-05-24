@@ -4,6 +4,8 @@ sudo: false  # use the new container-based Travis infrastructure
 
 dist: xenial # work around to get dotnet 2.2
 
+mono: none
+
 dotnet: 2.2
 
 install:

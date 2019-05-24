@@ -5,13 +5,47 @@
 #load "../../../.paket/load/netstandard2.1/Testing/testing.group.fsx"
 
 #load "../Continuation.fs"
+#load "../Memoization.fs"
 #load "../BCL/Char.fs"
 #load "../Reflection.fs"
+
+#time
+
+open Informedica.GenUtils.Lib
 
 
 module ContinuationTests =
 
+    printfn "Tests will follow"
 
+
+
+module MemoizationTests =
+
+    let f1 x = x * 2
+
+    let f2 x = x + "a"
+
+    let f1mem = Memoization.memoize f1
+    
+    let f2mem = Memoization.memoize f2
+
+    f1mem 2 |> ignore
+    printfn "Memoized f1 with 2 = %i" (f1mem 2)
+
+
+    f2mem "b" |> ignore
+    printfn "Memoized f2 with b = %s" (f2mem "b")
+
+    let rec fibs n = 
+        if n < 1 then 1 else
+        (fibs (n - 1)) + (fibs (n - 2))
+
+    let fibsmem = Memoization.memoize fibs
+
+    40 |> fibsmem |> printfn "fibs 40 = %i"
+    40 |> fibsmem |> printfn "Memoized fibs 40 = %i"
+    
 
 module CharTests =
 
