@@ -20,14 +20,14 @@ before_install:
 matrix:
   include:
     - os: linux # Ubuntu 14.04
-      dist: trusty
-      sudo: required
-      dotnet : 2.1.300
+      dist: xenial
+      sudo: false
+      dotnet : 2.2
     - os: osx # OSX 10.12
       osx_image: xcode9.1
-      dotnet : 2.1.300
+      dotnet : 2.2
       dist: trusty
-      sudo: required
+      sudo: false
       
 script: 
   - ./build.sh test
