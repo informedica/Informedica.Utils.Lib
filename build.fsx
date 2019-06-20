@@ -6,7 +6,9 @@ nuget FSharp.Core
 nuget Fake.DotNet.Cli
 nuget Fake.DotNet.AssemblyInfoFile
 nuget Fake.IO.FileSystem
-nuget Fake.Core.Target //"
+nuget Fake.Core.Target
+nuget Fake.Core.ReleaseNotes
+//"
 
 #load "./.fake/build.fsx/intellisense.fsx"
 
@@ -23,8 +25,10 @@ System.Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
 
 open Fake.Core
 open Fake.IO
+open Fake.IO.FileSystemOperators
 open Fake.IO.Globbing.Operators
 open Fake.DotNet
+
 
 
 // Utils
@@ -42,18 +46,19 @@ let (|Fsproj|Csproj|Vbproj|) (projFileName:string) =
 // Properties
 let buildDir = "./build/"
 let project = "src/Informedica.GenUtils.Lib/Informedica.GenUtils.Lib.fsproj"
-
+let summary = "A library with utility functions"
+let release = ReleaseNotes.load "RELEASE_NOTES.md"
 
 // Targets
 
 // Generate assembly info files with the right version & up-to-date information
 Target.create "AssemblyInfo" <| fun _ ->
     let getAssemblyInfoAttributes projectName =
-        [ Attribute.Title (projectName)
-          Attribute.Product project
-          Attribute.Description summary
-          Attribute.Version release.AssemblyVersion
-          Attribute.FileVersion release.AssemblyVersion ]
+        [ AssemblyInfo.Title (projectName)
+          AssemblyInfo.Product project
+          AssemblyInfo.Description summary
+          AssemblyInfo.Version release.AssemblyVersion
+          AssemblyInfo.FileVersion release.AssemblyVersion ]
 
     let getProjectDetails projectPath =
         let projectName = System.IO.Path.GetFileNameWithoutExtension(projectPath)
@@ -65,11 +70,11 @@ Target.create "AssemblyInfo" <| fun _ ->
 
     !! "src/**/*.??proj"
     |> Seq.map getProjectDetails
-    |> Seq.iter (fun (projFileName, projectName, folderName, attributes) ->
+    |> Seq.iter (fun (projFileName, _, folderName, attributes) ->
         match projFileName with
-        | Fsproj -> CreateFSharpAssemblyInfo (folderName @@ "AssemblyInfo.fs") attributes
-        | Csproj -> CreateCSharpAssemblyInfo ((folderName @@ "Properties") @@ "AssemblyInfo.cs") attributes
-        | Vbproj -> CreateVisualBasicAssemblyInfo ((folderName @@ "My Project") @@ "AssemblyInfo.vb") attributes
+        | Fsproj -> AssemblyInfoFile.createFSharp (folderName @@ "AssemblyInfo.fs") attributes
+        | Csproj -> AssemblyInfoFile.createCSharp ((folderName @@ "Properties") @@ "AssemblyInfo.cs") attributes
+        | Vbproj -> AssemblyInfoFile.createVisualBasic ((folderName @@ "My Project") @@ "AssemblyInfo.vb") attributes
         )
 
 
