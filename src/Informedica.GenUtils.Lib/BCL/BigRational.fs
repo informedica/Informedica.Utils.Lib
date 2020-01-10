@@ -90,7 +90,7 @@ module BigRational =
     let toMultipleOfCont succ fail d n  =
         if d = 0N then CannotDivideByZero |> fail
         else
-            let m = (n / d) |> BigRational.ToInt32 |> BigRational.FromInt
+            let m = (n / d) |> BigRational.ToBigInt |> BigRational.FromBigInt
             if m * d < n then (m + 1N) * d else m * d
             |> succ
 

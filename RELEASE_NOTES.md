@@ -1,3 +1,6 @@
+#### 0.5.0-beta - Nov 11 2019
+* Switch to dotnet core
+
 #### 0.4.2-beta - June 09 2016
 * Added missing assembly info
 

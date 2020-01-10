@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="BCL\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\Script.fsx" />
+    <None Include="paket.template" />
+    <None Include="paket.references" />
     <Compile Include="Continuation.fs" />
     <Compile Include="Memoization.fs" />
     <Compile Include="Reflection.fs" />
@@ -26,6 +28,7 @@
     <Compile Include="Path.fs" />
     <Compile Include="File.fs" />
     <Compile Include="App.fs" />
+    <None Include="Scripts\Script.fsx" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

@@ -4,6 +4,7 @@
 #r "paket:
 nuget FSharp.Core
 nuget Fake.DotNet.Cli
+nuget Fake.DotNet.Paket
 nuget Fake.DotNet.AssemblyInfoFile
 nuget Fake.IO.FileSystem
 nuget Fake.Core.Target
@@ -30,7 +31,6 @@ open Fake.IO.Globbing.Operators
 open Fake.DotNet
 
 
-
 // Utils
 
 // Helper active pattern for project types
@@ -48,6 +48,8 @@ let buildDir = "./build/"
 let project = "src/Informedica.GenUtils.Lib/Informedica.GenUtils.Lib.fsproj"
 let summary = "A library with utility functions"
 let release = ReleaseNotes.load "RELEASE_NOTES.md"
+let srcGlob = "*.fsproj"
+let distDir = "./dist"
 
 // Targets
 
@@ -103,6 +105,41 @@ Target.create "test" <| fun _ ->
         failwithf "`dotnet %s %s` failed" cmd args
 
 
+Target.create "bundle" <| fun _ ->
+    !! project
+    |> Seq.iter (fun proj ->
+        let args =
+            [
+                sprintf "/p:PackageVersion=%s" release.NugetVersion
+                sprintf "/p:PackageReleaseNotes=\"%s\"" (release.Notes |> String.concat "\n")
+            ] |> String.concat " "
+        DotNet.pack (fun c ->
+            { c with
+                Configuration = DotNet.BuildConfiguration.Release
+                OutputPath = Some distDir
+                Common =
+                    c.Common
+                    |> DotNet.Options.withCustomParams (Some args)
+            }) proj
+    )
+
+
+Target.create "nuget" <| fun _ ->
+    Paket.pack(fun p -> 
+        printf "NuGet: %A" p
+        { p with
+            OutputPath = "bin"
+            Version = release.NugetVersion
+            ReleaseNotes = String.toLines release.Notes})
+
+
+Target.create "publishnuget" <| fun _ ->
+    Paket.push(fun p -> 
+        { p with
+            WorkingDir = "bin" })
+
+
+
 Target.create "nothing" ignore
 
 
@@ -114,7 +151,8 @@ open Fake.Core.TargetOperators
 "clean"
 ==> "build"
 ==> "test"
-==> "publish"
+==> "bundle"
+
 
 // Start build
 

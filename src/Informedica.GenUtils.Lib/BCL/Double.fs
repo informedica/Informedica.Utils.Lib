@@ -32,8 +32,8 @@ module Double =
 
 
     /// Get a `float Option` from a string
-    let tryParse s =
-        let (b, n) = Double.TryParse(s, Globalization.NumberStyles.Any, Globalization.CultureInfo.InvariantCulture)
+    let tryParse (s : string) =
+        let (b, n) = Double.TryParse(s)
         if b then Some n else None
 
 

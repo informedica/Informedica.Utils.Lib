@@ -1,21 +1,21 @@
 framework: auto-detect
+redirects: on
 
-source https://nuget.org/api/v2
+source https://api.nuget.org/v3/index.json
 
-nuget FSharp.Core
 nuget MathNet.Numerics.FSharp
 
 clitool dotnet-fake
 
 group Formatting
-source https://nuget.org/api/v2
+	source https://api.nuget.org/v3/index.json
 
-nuget FSharp.Formatting
-nuget FSharp.Formatting.CommandTool
+	nuget FSharp.Formatting
+	nuget FSharp.Formatting.CommandTool
 
 group Testing
-source https://nuget.org/api/v2
+	source https://api.nuget.org/v3/index.json
 
-nuget Unquote
-nuget Expecto
-nuget Expecto.FsCheck
+	nuget Unquote
+	nuget Expecto
+	nuget Expecto.FsCheck
