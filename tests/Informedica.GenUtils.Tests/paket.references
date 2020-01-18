@@ -1,6 +1,0 @@
-MathNet.Numerics.FSharp
-
-group Testing
-	Unquote
-	Expecto
-	Expecto.FsCheck

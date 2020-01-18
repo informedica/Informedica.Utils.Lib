@@ -45,7 +45,7 @@ let (|Fsproj|Csproj|Vbproj|) (projFileName:string) =
 
 // Properties
 let buildDir = "./build/"
-let project = "src/Informedica.GenUtils.Lib/Informedica.GenUtils.Lib.fsproj"
+let project = "src/Informedica.Utils.Lib/Informedica.Utils.Lib.fsproj"
 let summary = "A library with utility functions"
 let release = ReleaseNotes.load "RELEASE_NOTES.md"
 let srcGlob = "*.fsproj"
@@ -95,7 +95,7 @@ Target.create "test" <| fun _ ->
     Trace.trace "Running tests..."
 
     let cmd = "run"
-    let args = "--project tests/Informedica.GenUtils.Tests/Informedica.GenUtils.Tests.fsproj"
+    let args = "--project tests/Informedica.Utils.Tests/Informedica.Utils.Tests.fsproj"
     let result = 
         DotNet.exec 
             (fun x -> { x with DotNetCliPath = "dotnet" }) 
