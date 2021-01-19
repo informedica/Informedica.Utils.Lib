@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - 2021-01-19
 
+Completely moved to latest miniscaffold and net5.0. Will replace Informedica.GenUtils.Lib
 
 ## 0.5.0-beta - Nov 11 2019
 * Switch to dotnet core
@@ -38,4 +39,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.0.1-alpha - April 30 2016
 * Initial setup
 
-[Unreleased]: https://github.com/informedica/Informedica.Utils.Lib/compare/v1.1.3...HEAD
