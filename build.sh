@@ -1,29 +1,9 @@
 #!/usr/bin/env bash
-# to properly set Travis permissions: https://stackoverflow.com/questions/33820638/travis-yml-gradlew-permission-denied
-# git update-index --chmod=+x fake.sh
-# git commit -m "permission access for travis"
 
 set -eu
 set -o pipefail
 
-OS=${OS:-"unknown"}
+echo "Restoring dotnet tools..."
+dotnet tool restore
 
-function run() {
-  if [[ "$OS" != "Windows_NT" ]]
-  then
-    mono "$@"
-  else
-    "$@"
-  fi
-}
-
-#Only run the bootstrapper if no paket.exe
-if [ ! -e .paket/paket.exe ]
-	then
-		run .paket/paket.bootstrapper.exe
-fi
-
-dotnet restore build.proj
-
-
-dotnet fake build --target $@
+PAKET_SKIP_RESTORE_TARGETS=true FAKE_DETAILED_ERRORS=true dotnet fake build -t "$@"
