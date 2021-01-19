@@ -49,4 +49,3 @@ group Analyzers
   source https://api.nuget.org/v3/index.json
   nuget BinaryDefense.FSharp.Analyzers.Hashing 0.1.0
 
-
