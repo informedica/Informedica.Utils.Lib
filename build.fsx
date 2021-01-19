@@ -1,3 +1,4 @@
+open System
 
 #if !FAKE
 #r "Facades/netstandard"
@@ -26,8 +27,6 @@ Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
 #load ".fake/build.fsx/intellisense.fsx"
 #load "docsTool/CLI.fs"
 
-
-open System
 open Argu
 open Fake.SystemHelper
 open Fake.Core
@@ -621,7 +620,6 @@ let githubRelease _ =
     // Get release notes with properly-linked version number
     let releaseNotes = latestEntry |> Changelog.mkReleaseNotes linkReferenceForLatestEntry
 
-//    let gitOwner = "halcwb"
     GitHub.createClientWithToken token
     |> GitHub.draftNewRelease gitOwner gitRepoName (tagFromVersionNumber latestEntry.NuGetVersion) (latestEntry.SemVer.PreRelease <> None) (releaseNotes |> Seq.singleton)
     |> GitHub.uploadFiles files
@@ -724,7 +722,7 @@ Target.create "ReleaseDocs" releaseDocs
     ==> "DotnetTest"
     =?> ("GenerateCoverageReport", not disableCodeCoverage)
     ==> "DotnetPack"
-    ==> "SourceLinkTest"
+//    ==> "SourceLinkTest"
     ==> "PublishToNuGet"
     ==> "GitRelease"
     ==> "GitHubRelease"

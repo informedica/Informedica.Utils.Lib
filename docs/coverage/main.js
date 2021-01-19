@@ -225,22 +225,22 @@ var assemblies = [
     "name": "Informedica.Utils.Lib",
     "classes": [
       { "name": "Informedica.GenUtils.Lib.App", "rp": "Informedica.Utils.Lib_App.htm", "cl": 0, "ucl": 0, "cal": 0, "tl": 0, "ct": "MethodCoverage", "mc": 0, "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.Array", "rp": "Informedica.Utils.Lib_Array.htm", "cl": 0, "ucl": 19, "cal": 19, "tl": 50, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 12, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.BCL.BigRational", "rp": "Informedica.Utils.Lib_BigRational.htm", "cl": 26, "ucl": 72, "cal": 98, "tl": 279, "ct": "LineCoverage", "mc": "-", "cb": 8, "tb": 64, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.BCL.Char", "rp": "Informedica.Utils.Lib_Char.htm", "cl": 0, "ucl": 7, "cal": 7, "tl": 32, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.BCL.DateTime", "rp": "Informedica.Utils.Lib_DateTime.htm", "cl": 0, "ucl": 33, "cal": 33, "tl": 94, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 16, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.BCL.Double", "rp": "Informedica.Utils.Lib_Double.htm", "cl": 20, "ucl": 6, "cal": 26, "tl": 129, "ct": "LineCoverage", "mc": "-", "cb": 22, "tb": 24, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.BCL.Int32", "rp": "Informedica.Utils.Lib_Int32.htm", "cl": 0, "ucl": 2, "cal": 2, "tl": 11, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.BCL.String", "rp": "Informedica.Utils.Lib_String.htm", "cl": 22, "ucl": 17, "cal": 39, "tl": 157, "ct": "LineCoverage", "mc": "-", "cb": 23, "tb": 28, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.Array", "rp": "Informedica.Utils.Lib_Array.htm", "cl": 0, "ucl": 24, "cal": 24, "tl": 50, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 14, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.BCL.BigRational", "rp": "Informedica.Utils.Lib_BigRational.htm", "cl": 33, "ucl": 79, "cal": 112, "tl": 279, "ct": "LineCoverage", "mc": "-", "cb": 8, "tb": 76, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.BCL.Char", "rp": "Informedica.Utils.Lib_Char.htm", "cl": 0, "ucl": 11, "cal": 11, "tl": 32, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.BCL.DateTime", "rp": "Informedica.Utils.Lib_DateTime.htm", "cl": 0, "ucl": 43, "cal": 43, "tl": 94, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 19, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.BCL.Double", "rp": "Informedica.Utils.Lib_Double.htm", "cl": 32, "ucl": 3, "cal": 35, "tl": 129, "ct": "LineCoverage", "mc": "-", "cb": 16, "tb": 18, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.BCL.Int32", "rp": "Informedica.Utils.Lib_Int32.htm", "cl": 0, "ucl": 3, "cal": 3, "tl": 11, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.BCL.String", "rp": "Informedica.Utils.Lib_String.htm", "cl": 30, "ucl": 17, "cal": 47, "tl": 157, "ct": "LineCoverage", "mc": "-", "cb": 15, "tb": 20, "lch": [], "bch": [], "hc": [] },
       { "name": "Informedica.GenUtils.Lib.Continuation", "rp": "Informedica.Utils.Lib_Continuation.htm", "cl": 0, "ucl": 7, "cal": 7, "tl": 27, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
       { "name": "Informedica.GenUtils.Lib.File", "rp": "Informedica.Utils.Lib_File.htm", "cl": 0, "ucl": 7, "cal": 7, "tl": 23, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.List", "rp": "Informedica.Utils.Lib_List.htm", "cl": 3, "ucl": 15, "cal": 18, "tl": 59, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 6, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.List", "rp": "Informedica.Utils.Lib_List.htm", "cl": 4, "ucl": 21, "cal": 25, "tl": 59, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 10, "lch": [], "bch": [], "hc": [] },
       { "name": "Informedica.GenUtils.Lib.Memoization", "rp": "Informedica.Utils.Lib_Memoization.htm", "cl": 0, "ucl": 8, "cal": 8, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.NullCheck", "rp": "Informedica.Utils.Lib_NullCheck.htm", "cl": 2, "ucl": 4, "cal": 6, "tl": 17, "ct": "LineCoverage", "mc": "-", "cb": 4, "tb": 12, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.Option", "rp": "Informedica.Utils.Lib_Option.htm", "cl": 0, "ucl": 7, "cal": 7, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 4, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.NullCheck", "rp": "Informedica.Utils.Lib_NullCheck.htm", "cl": 4, "ucl": 2, "cal": 6, "tl": 17, "ct": "LineCoverage", "mc": "-", "cb": 4, "tb": 6, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.Option", "rp": "Informedica.Utils.Lib_Option.htm", "cl": 0, "ucl": 8, "cal": 8, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 6, "lch": [], "bch": [], "hc": [] },
       { "name": "Informedica.GenUtils.Lib.Path", "rp": "Informedica.Utils.Lib_Path.htm", "cl": 0, "ucl": 1, "cal": 1, "tl": 8, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.Reflection", "rp": "Informedica.Utils.Lib_Reflection.htm", "cl": 6, "ucl": 0, "cal": 6, "tl": 19, "ct": "LineCoverage", "mc": "-", "cb": 3, "tb": 4, "lch": [], "bch": [], "hc": [] },
-      { "name": "Informedica.GenUtils.Lib.Seq", "rp": "Informedica.Utils.Lib_Seq.htm", "cl": 0, "ucl": 15, "cal": 15, "tl": 32, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 12, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.Reflection", "rp": "Informedica.Utils.Lib_Reflection.htm", "cl": 6, "ucl": 0, "cal": 6, "tl": 19, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 2, "lch": [], "bch": [], "hc": [] },
+      { "name": "Informedica.GenUtils.Lib.Seq", "rp": "Informedica.Utils.Lib_Seq.htm", "cl": 0, "ucl": 16, "cal": 16, "tl": 32, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 12, "lch": [], "bch": [], "hc": [] },
     ]},
 ];
 
@@ -254,60 +254,74 @@ var riskHotspotMetrics = [
 
 var riskHotspots = [
   {
-    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Tuple`2<MathNet.Numerics.BigRational,MathNet.Numerics.BigRational> Informedica.GenUtils.Lib.BCL.BigRational::valueToFactorRatio$cont@253(MathNet.Numerics.BigRational,MathNet.Numerics.BigRational,Microsoft.FSharp.Core.FSharpOption`1<MathNet.Numerics.BigRational>,System.Boolean,Microsoft.FSharp.Core.FSharpOption`1<MathNet.Numerics.BigRational>,System.Boolean,Microsoft.FSharp.Core.Unit)", "methodShortName": "valueToFactorRatio$cont@253(...)", "fileIndex": 0, "line": 259,
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Tuple`2<MathNet.Numerics.BigRational,MathNet.Numerics.BigRational> Informedica.GenUtils.Lib.BCL.BigRational::valueToFactorRatio(MathNet.Numerics.BigRational,Microsoft.FSharp.Core.FSharpOption`1<MathNet.Numerics.BigRational>,System.Boolean,Microsoft.FSharp.Core.FSharpOption`1<MathNet.Numerics.BigRational>,System.Boolean)", "methodShortName": "valueToFactorRatio(...)", "fileIndex": 0, "line": 250,
     "metrics": [
-      { "value": 11, "exceeded": false },
-      { "value": 64, "exceeded": false },
-      { "value": 132, "exceeded": true },
+      { "value": 20, "exceeded": false },
+      { "value": 840, "exceeded": true },
+      { "value": 420, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.BCL.BigRational/farey@177::GenerateNext(System.Collections.Generic.IEnumerable`1<System.Tuple`2<System.Numerics.BigInteger,System.Numerics.BigInteger>>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 177,
     "metrics": [
-      { "value": 11, "exceeded": false },
+      { "value": 12, "exceeded": false },
       { "value": 8, "exceeded": false },
-      { "value": 132, "exceeded": true },
-    ]},
-  {
-    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Tuple`2<MathNet.Numerics.BigRational,MathNet.Numerics.BigRational> Informedica.GenUtils.Lib.BCL.BigRational::valueToFactorRatio(MathNet.Numerics.BigRational,Microsoft.FSharp.Core.FSharpOption`1<MathNet.Numerics.BigRational>,System.Boolean,Microsoft.FSharp.Core.FSharpOption`1<MathNet.Numerics.BigRational>,System.Boolean)", "methodShortName": "valueToFactorRatio(...)", "fileIndex": 0, "line": 250,
-    "metrics": [
-      { "value": 10, "exceeded": false },
-      { "value": 192, "exceeded": false },
-      { "value": 110, "exceeded": true },
+      { "value": 156, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.Array", "reportPath": "Informedica.Utils.Lib_Array.htm", "methodName": "System.Void Informedica.GenUtils.Lib.Array/pickArray@11::Close()", "methodShortName": "Close()", "fileIndex": 0, "line": 11,
     "metrics": [
-      { "value": 7, "exceeded": false },
+      { "value": 9, "exceeded": false },
       { "value": 0, "exceeded": false },
-      { "value": 56, "exceeded": true },
+      { "value": 90, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Void Informedica.GenUtils.Lib.BCL.BigRational/calcConc@194::Close()", "methodShortName": "Close()", "fileIndex": 0, "line": 194,
     "metrics": [
-      { "value": 7, "exceeded": false },
+      { "value": 9, "exceeded": false },
       { "value": 0, "exceeded": false },
-      { "value": 56, "exceeded": true },
+      { "value": 90, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.File", "reportPath": "Informedica.Utils.Lib_File.htm", "methodName": "System.Void Informedica.GenUtils.Lib.File/enumerate@8::Close()", "methodShortName": "Close()", "fileIndex": 0, "line": 8,
     "metrics": [
-      { "value": 7, "exceeded": false },
+      { "value": 9, "exceeded": false },
       { "value": 0, "exceeded": false },
-      { "value": 56, "exceeded": true },
+      { "value": 90, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.List", "reportPath": "Informedica.Utils.Lib_List.htm", "methodName": "System.Void Informedica.GenUtils.Lib.List/pickList@46::Close()", "methodShortName": "Close()", "fileIndex": 0, "line": 46,
     "metrics": [
-      { "value": 7, "exceeded": false },
+      { "value": 9, "exceeded": false },
       { "value": 0, "exceeded": false },
-      { "value": 56, "exceeded": true },
+      { "value": 90, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.Seq", "reportPath": "Informedica.Utils.Lib_Seq.htm", "methodName": "System.Void Informedica.GenUtils.Lib.Seq/pickSeq@8::Close()", "methodShortName": "Close()", "fileIndex": 0, "line": 8,
     "metrics": [
-      { "value": 7, "exceeded": false },
+      { "value": 9, "exceeded": false },
       { "value": 0, "exceeded": false },
+      { "value": 90, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.NullCheck", "reportPath": "Informedica.Utils.Lib_NullCheck.htm", "methodName": "d Informedica.GenUtils.Lib.NullCheck::nullOrDef3(Microsoft.FSharp.Core.FSharpFunc`2<a,Microsoft.FSharp.Core.FSharpFunc`2<b,Microsoft.FSharp.Core.FSharpFunc`2<c,d>>>,d,a,b,c)", "methodShortName": "nullOrDef3(...)", "fileIndex": 0, "line": 15,
+    "metrics": [
+      { "value": 7, "exceeded": false },
+      { "value": 2, "exceeded": false },
       { "value": 56, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.Array", "reportPath": "Informedica.Utils.Lib_Array.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.Array/pickArray@11::GenerateNext(System.Collections.Generic.IEnumerable`1<a>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 11,
+    "metrics": [
+      { "value": 6, "exceeded": false },
+      { "value": 2, "exceeded": false },
+      { "value": 42, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.BCL.BigRational/calcConc@194::GenerateNext(System.Collections.Generic.IEnumerable`1<MathNet.Numerics.BigRational>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 194,
+    "metrics": [
+      { "value": 6, "exceeded": false },
+      { "value": 2, "exceeded": false },
+      { "value": 42, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.DateTime", "reportPath": "Informedica.Utils.Lib_DateTime.htm", "methodName": "System.Tuple`4<System.Int32,System.Int32,System.Int32,System.Int32> Informedica.GenUtils.Lib.BCL.DateTime::age(System.DateTime,System.DateTime)", "methodShortName": "age(...)", "fileIndex": 0, "line": 41,
@@ -317,52 +331,38 @@ var riskHotspots = [
       { "value": 42, "exceeded": true },
     ]},
   {
-    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.NullCheck", "reportPath": "Informedica.Utils.Lib_NullCheck.htm", "methodName": "d Informedica.GenUtils.Lib.NullCheck::nullOrDef3(Microsoft.FSharp.Core.FSharpFunc`2<a,Microsoft.FSharp.Core.FSharpFunc`2<b,Microsoft.FSharp.Core.FSharpFunc`2<c,d>>>,d,a,b,c)", "methodShortName": "nullOrDef3(...)", "fileIndex": 0, "line": 15,
-    "metrics": [
-      { "value": 6, "exceeded": false },
-      { "value": 8, "exceeded": false },
-      { "value": 42, "exceeded": true },
-    ]},
-  {
-    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.Array", "reportPath": "Informedica.Utils.Lib_Array.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.Array/pickArray@11::GenerateNext(System.Collections.Generic.IEnumerable`1<a>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 11,
-    "metrics": [
-      { "value": 5, "exceeded": false },
-      { "value": 2, "exceeded": false },
-      { "value": 30, "exceeded": true },
-    ]},
-  {
-    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "Microsoft.FSharp.Core.FSharpChoice`5<Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit> Informedica.GenUtils.Lib.BCL.BigRational::|Mult|Div|Add|Subtr|NoMatch|(Microsoft.FSharp.Core.FSharpFunc`2<MathNet.Numerics.BigRational,Microsoft.FSharp.Core.FSharpFunc`2<MathNet.Numerics.BigRational,MathNet.Numerics.BigRational>>)", "methodShortName": "|Mult|Div|Add|Subtr|NoMatch|(...)", "fileIndex": 0, "line": 145,
-    "metrics": [
-      { "value": 5, "exceeded": false },
-      { "value": 8, "exceeded": false },
-      { "value": 30, "exceeded": true },
-    ]},
-  {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.File", "reportPath": "Informedica.Utils.Lib_File.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.File/enumerate@8::GenerateNext(System.Collections.Generic.IEnumerable`1<System.IO.FileInfo>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 8,
     "metrics": [
-      { "value": 5, "exceeded": false },
+      { "value": 6, "exceeded": false },
       { "value": 2, "exceeded": false },
-      { "value": 30, "exceeded": true },
+      { "value": 42, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.List", "reportPath": "Informedica.Utils.Lib_List.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.List/pickList@46::GenerateNext(System.Collections.Generic.IEnumerable`1<a>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 46,
     "metrics": [
-      { "value": 5, "exceeded": false },
+      { "value": 6, "exceeded": false },
       { "value": 2, "exceeded": false },
-      { "value": 30, "exceeded": true },
-    ]},
-  {
-    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.Option", "reportPath": "Informedica.Utils.Lib_Option.htm", "methodName": "Microsoft.FSharp.Core.FSharpOption`1<a> Informedica.GenUtils.Lib.Option::choose(Microsoft.FSharp.Core.FSharpFunc`2<a,Microsoft.FSharp.Core.FSharpFunc`2<a,System.Boolean>>,Microsoft.FSharp.Core.FSharpOption`1<a>,Microsoft.FSharp.Core.FSharpOption`1<a>)", "methodShortName": "choose(...)", "fileIndex": 0, "line": 18,
-    "metrics": [
-      { "value": 5, "exceeded": false },
-      { "value": 4, "exceeded": false },
-      { "value": 30, "exceeded": true },
+      { "value": 42, "exceeded": true },
     ]},
   {
     "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.Seq", "reportPath": "Informedica.Utils.Lib_Seq.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.Seq/pickSeq@8::GenerateNext(System.Collections.Generic.IEnumerable`1<a>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 8,
     "metrics": [
-      { "value": 5, "exceeded": false },
+      { "value": 6, "exceeded": false },
       { "value": 2, "exceeded": false },
+      { "value": 42, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "Microsoft.FSharp.Core.FSharpChoice`5<Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit> Informedica.GenUtils.Lib.BCL.BigRational::|Mult|Div|Add|Subtr|NoMatch|(Microsoft.FSharp.Core.FSharpFunc`2<MathNet.Numerics.BigRational,Microsoft.FSharp.Core.FSharpFunc`2<MathNet.Numerics.BigRational,MathNet.Numerics.BigRational>>)", "methodShortName": "|Mult|Div|Add|Subtr|NoMatch|(...)", "fileIndex": 0, "line": 144,
+    "metrics": [
+      { "value": 5, "exceeded": false },
+      { "value": 16, "exceeded": false },
+      { "value": 30, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.Option", "reportPath": "Informedica.Utils.Lib_Option.htm", "methodName": "Microsoft.FSharp.Core.FSharpOption`1<a> Informedica.GenUtils.Lib.Option::choose(Microsoft.FSharp.Core.FSharpFunc`2<a,Microsoft.FSharp.Core.FSharpFunc`2<a,System.Boolean>>,Microsoft.FSharp.Core.FSharpOption`1<a>,Microsoft.FSharp.Core.FSharpOption`1<a>)", "methodShortName": "choose(...)", "fileIndex": 0, "line": 13,
+    "metrics": [
+      { "value": 5, "exceeded": false },
+      { "value": 8, "exceeded": false },
       { "value": 30, "exceeded": true },
     ]},
   {
@@ -373,10 +373,45 @@ var riskHotspots = [
       { "value": 20, "exceeded": true },
     ]},
   {
-    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.DateTime", "reportPath": "Informedica.Utils.Lib_DateTime.htm", "methodName": "System.String Informedica.GenUtils.Lib.BCL.DateTime::ageToString(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)", "methodShortName": "ageToString(...)", "fileIndex": 0, "line": 84,
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.BCL.BigRational/divisorsOfN2@214-1::GenerateNext(System.Collections.Generic.IEnumerable`1<a>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 214,
+    "metrics": [
+      { "value": 4, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 20, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.BCL.BigRational/divisorsOfN2@214-4::GenerateNext(System.Collections.Generic.IEnumerable`1<a>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 214,
+    "metrics": [
+      { "value": 4, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 20, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.BCL.BigRational/divisorsOfBigInt@217-2::GenerateNext(System.Collections.Generic.IEnumerable`1<System.Numerics.BigInteger>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 217,
+    "metrics": [
+      { "value": 4, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 20, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.BigRational", "reportPath": "Informedica.Utils.Lib_BigRational.htm", "methodName": "System.Int32 Informedica.GenUtils.Lib.BCL.BigRational/divisorsOfN@224-1::GenerateNext(System.Collections.Generic.IEnumerable`1<MathNet.Numerics.BigRational>&)", "methodShortName": "GenerateNext(...)", "fileIndex": 0, "line": 224,
+    "metrics": [
+      { "value": 4, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 20, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.DateTime", "reportPath": "Informedica.Utils.Lib_DateTime.htm", "methodName": "System.String Informedica.GenUtils.Lib.BCL.DateTime::ageToString(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)", "methodShortName": "ageToString(...)", "fileIndex": 0, "line": 77,
     "metrics": [
       { "value": 4, "exceeded": false },
       { "value": 8, "exceeded": false },
+      { "value": 20, "exceeded": true },
+    ]},
+  {
+    "assembly": "Informedica.Utils.Lib", "class": "Informedica.GenUtils.Lib.BCL.DateTime", "reportPath": "Informedica.Utils.Lib_DateTime.htm", "methodName": "System.String Informedica.GenUtils.Lib.BCL.DateTime/pluralize@73::Invoke(System.Int32,System.Tuple`2<System.String,System.String>)", "methodShortName": "Invoke(...)", "fileIndex": 0, "line": 73,
+    "metrics": [
+      { "value": 4, "exceeded": false },
+      { "value": 3, "exceeded": false },
       { "value": 20, "exceeded": true },
     ]},
   {

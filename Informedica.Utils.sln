@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{B1C6169B
 		build.cmd = build.cmd
 		build.fsx = build.fsx
 		build.sh = build.sh
+		CHANGELOG.md = CHANGELOG.md
 		LICENSE.txt = LICENSE.txt
 		paket.dependencies = paket.dependencies
 		README.md = README.md
