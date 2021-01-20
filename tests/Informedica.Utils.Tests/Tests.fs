@@ -1,4 +1,4 @@
-﻿module Tests
+module Tests
 
     open Expecto
 
@@ -12,7 +12,7 @@
 
         open Expecto
 
-        open Informedica.GenUtils.Lib.BCL
+        open Informedica.Utils.Lib.BCL
 
         [<Tests>]
         let tests =
@@ -268,7 +268,7 @@
         open Expecto
         open MathNet.Numerics
 
-        open Informedica.GenUtils.Lib.BCL
+        open Informedica.Utils.Lib.BCL
 
         [<Tests>]
         let tests =
@@ -468,7 +468,7 @@
         open Expecto
 
         open MathNet.Numerics
-        open Informedica.GenUtils.Lib.BCL
+        open Informedica.Utils.Lib.BCL
 
 
         /// Create the necessary test generators
@@ -602,7 +602,7 @@
 
         open Expecto
 
-        open Informedica.GenUtils.Lib
+        open Informedica.Utils.Lib
 
         [<Tests>]
         let tests =
@@ -643,7 +643,7 @@
 
         open Expecto
 
-        open Informedica.GenUtils.Lib
+        open Informedica.Utils.Lib
 
         type TestUnion = TestUnion | AnotherTestUnion
 

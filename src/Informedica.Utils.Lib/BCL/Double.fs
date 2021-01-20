@@ -1,4 +1,4 @@
-﻿namespace Informedica.GenUtils.Lib.BCL
+namespace Informedica.Utils.Lib.BCL
 
 
 module Double =

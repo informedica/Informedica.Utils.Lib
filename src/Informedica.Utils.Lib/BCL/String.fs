@@ -1,4 +1,4 @@
-﻿namespace Informedica.GenUtils.Lib.BCL
+namespace Informedica.Utils.Lib.BCL
 
 /// Helper functions for `System.String`
 //open System.Security.Cryptography
@@ -7,7 +7,7 @@ module String =
     open System
     open System.Text.RegularExpressions
 
-    open Informedica.GenUtils.Lib
+    open Informedica.Utils.Lib
 
     /// Apply `f` to string `s`
     let apply f (s: string) = f s

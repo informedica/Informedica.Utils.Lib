@@ -1,4 +1,4 @@
-﻿// First load all dependencies
+// First load all dependencies
 #r "netstandard"
 
 #load "../../../.paket/load/netstandard2.1/main.group.fsx"
@@ -11,7 +11,7 @@
 
 #time
 
-open Informedica.GenUtils.Lib
+open Informedica.Utils.Lib
 
 
 module ContinuationTests =
@@ -49,7 +49,7 @@ module MemoizationTests =
 
 module CharTests =
 
-    open Informedica.GenUtils.Lib.BCL
+    open Informedica.Utils.Lib.BCL
     open Swensen.Unquote
     open FsCheck
 
@@ -91,7 +91,7 @@ module CharTests =
 
 module ReflectionTests =
 
-    open Informedica.GenUtils.Lib
+    open Informedica.Utils.Lib
     
     type Test = |Pass | Fail
 

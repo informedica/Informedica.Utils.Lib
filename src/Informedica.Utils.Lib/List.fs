@@ -1,10 +1,10 @@
-﻿namespace Informedica.GenUtils.Lib
+namespace Informedica.Utils.Lib
 
 /// Additional utitilty functions
 /// for lists
 module List =
 
-    open Informedica.GenUtils.Lib.BCL
+    open Informedica.Utils.Lib.BCL
 
 
     let remove pred xs =

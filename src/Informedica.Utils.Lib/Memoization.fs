@@ -1,4 +1,4 @@
-﻿namespace Informedica.GenUtils.Lib
+namespace Informedica.Utils.Lib
 
 /// Utility functions to apply memoization
 module Memoization =

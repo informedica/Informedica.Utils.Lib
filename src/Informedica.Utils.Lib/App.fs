@@ -1,4 +1,4 @@
-namespace Informedica.GenUtils.Lib
+namespace Informedica.Utils.Lib
 
 module App = 
 

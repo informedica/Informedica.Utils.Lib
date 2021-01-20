@@ -33,6 +33,7 @@
         <Compile Include="File.fs" />
         <Compile Include="App.fs" />
         <None Include="paket.references" />
+        <None Include="Scripts\NugetTest.fsx" />
         <None Include="Scripts\Script.fsx" />
     </ItemGroup>
     <Import Project="..\..\.paket\Paket.Restore.targets" />

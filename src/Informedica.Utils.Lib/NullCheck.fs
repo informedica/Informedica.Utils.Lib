@@ -1,4 +1,4 @@
-﻿namespace Informedica.GenUtils.Lib
+namespace Informedica.Utils.Lib
 
 /// Function to perform a safe null check
 module NullCheck =

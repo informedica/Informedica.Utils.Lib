@@ -1,8 +1,8 @@
-﻿namespace Informedica.GenUtils.Lib
+namespace Informedica.Utils.Lib
 
 module Array =
 
-    open Informedica.GenUtils.Lib.BCL
+    open Informedica.Utils.Lib.BCL
 
     let pickArray pl xs =
         match xs with

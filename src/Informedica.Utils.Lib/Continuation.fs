@@ -1,4 +1,4 @@
-namespace Informedica.GenUtils.Lib
+namespace Informedica.Utils.Lib
 
 /// Utility functions to support a continuation
 /// stile of programming, i.e. provide success and
