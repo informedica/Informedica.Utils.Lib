@@ -15,7 +15,7 @@ in VSCode.
 ## [1.0.0] - 2021-01-19
 
 ### Changed
-Completely moved to latest miniscaffold and net5.0. Will replace Informedica.Utils.Lib
+Completely moved to latest miniscaffold and net5.0. Will replace Informedica.GenUtils.Lib
 
 ## [0.5.0-beta]
 
