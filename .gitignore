@@ -1,9 +1,6 @@
 # Ignore all files using an opt-inn approach
 *
 
-# Ignore all files using an opt-inn approach
-*
-
 # Add .gitignore and .gitattributes
 !.gitignore
 !.gitattributes
@@ -104,6 +101,7 @@
 # Add test files
 !/tests/
 !/tests/Informedica.Utils.Tests/
+!/tests/Informedica.Utils.Tests/Scripts/
 
 # Ignore generated documentation files
 /docs/content/**/*.md

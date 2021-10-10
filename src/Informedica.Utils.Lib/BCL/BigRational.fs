@@ -1,6 +1,7 @@
 namespace Informedica.Utils.Lib.BCL
 
 /// Helper functions for `BigRational`
+[<AutoOpen>]
 module BigRational = 
 
     open System
